@@ -1,0 +1,39 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Ajustează padding-ul dacă este necesar */
+    font-family: 'Playfair Display', serif; /* Folosește aceeași font ca în wedplan.css */
+    background-color: transparent; /* Fundal complet transparent */
+    z-index: 1000; /* Asigură-te că bara de navigare este deasupra altor elemente */
+    box-shadow: none; /* Elimină umbra pentru un aspect curat */
+}
+
+.navbar .logo {
+    font-size: 24px; /* Ajustează dimensiunea fontului conform wedplan.css */
+    color: #6d463e; /* Culoare care se potrivește cu paleta de culori din wedplan.css */
+    font-weight: bold; /* Poate fi ajustat în funcție de stilurile existente */
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 30px; /* Ajustează spațierea conform wedplan.css */
+    list-style: none;
+}
+
+.navbar .nav-links li {
+    color: #6d463e; /* Asigură-te că textul este vizibil */
+    font-size: 18px; /* Ajustează dimensiunea fontului conform wedplan.css */
+    cursor: pointer;
+    transition: color 0.2s; /* Efect de tranziție la hover */
+}
+
+.navbar .nav-links li:hover {
+    color: #d9534f; /* Schimbă culoarea la hover pentru a evidenția link-urile, conform stilului */
+}
+
+.navbar .search-icon {
+    font-size: 20px; /* Ajustează dimensiunea iconului conform wedplan.css */
+    color: #6d463e; /* Asigură-te că se potrivește cu paleta de culori */
+}

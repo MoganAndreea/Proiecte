@@ -1,0 +1,89 @@
+/* Elimină marginile și padding-urile implicite */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Setează imaginea de fundal să acopere întreaga pagină */
+body {
+  background-image: url('./assets/Img_fundal.jpeg'); /* Înlocuiește cu calea reală a imaginii */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: 'Arial', sans-serif; /* Font general */
+}
+
+/* Poziționează formularul în centrul paginii */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  padding: 20px ; /* Spațiu mai generos */
+  border-radius: 15px ; /* Colțuri mai rotunjite */
+  background-color: rgba(247, 241, 236, 0.9); /* Culoare de fundal cu transparență */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2); /* Umbră mai pronunțată */
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden; /* Adaugă această linie */
+
+}
+.login-container h2 {
+  color: #6d4c41 ; /* Culoare mai închisă */
+  text-align: center !important;
+  margin-bottom: 20px !important; /* Margine mai mare pentru a oferi mai mult spațiu */
+  font-size: 30px !important; /* Dimensiune font mai mare */
+  font-weight: bold; /* Font îngroșat */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Umbra textului pentru un efect de adâncime */
+}
+
+.login-container.input-group {
+  margin-bottom: 20px ; /* Spațiu mai mare între input-uri */
+  text-align: left;
+}
+
+.login-container label {
+  display: block;
+  color: #6d4c41 ; /* Culoare mai închisă */
+  margin-bottom: 5px ;
+  font-weight: bold;
+}
+
+.login-container input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 12px 16px !important;
+  border: 1px solid #ccc;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  box-sizing: border-box; /* Adaugă această linie */
+  transition: border 0.3s, box-shadow 0.9s;
+}
+
+.login-container input:focus {
+  border-color: #6d4c41 ;
+  box-shadow: 0 0 8px rgba(109, 76, 65, 0.5);
+  outline: none;
+}
+
+.login-container button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px; /* Padding mai generos */
+  background-color: #6d4c41 !important; /* Culoare de fundal mai vibrantă */
+  color: white;
+  border: none ;
+  border-radius: 8px !important ; /* Colțuri rotunjite */
+  font-size: 16px !important;
+  cursor: pointer !important ;
+  transition: background-color 0.3s, transform 0.2s !important; /* Tranziție pentru fundal și transformare */
+}
+
+.login-container button:hover {
+  background-color: #5d4037; /* Culoare mai închisă la hover */
+  transform: scale(1.05); /* Ușor zoom pe hover */
+}

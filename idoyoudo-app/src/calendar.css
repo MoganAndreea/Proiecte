@@ -1,0 +1,95 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('./assets/Img_fundal.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.calendar-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+}
+.calendar.todo-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+}
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.todo-item:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.draggable {
+    cursor: grab;
+}
+.draggable:active {
+    cursor: grabbing;
+}
+.calendar-day {
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+}
+.calendar-day.drag-over {
+    transform: scale(1.2);
+    background-color: rgba(255, 0, 0, 0.5); /* Transparent red */
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Red shadow */
+}
+.current-day {
+    background-color: rgba(255, 20, 147, 0.5); /* Neon pink with transparency */
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+    box-shadow: 0 0 10px rgba(255, 20, 147, 0.8); /* Neon pink shadow */
+}
+.selected-day {
+    background-color: rgba(255, 0, 0, 0.5); /* Transparent red */
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+}
+.cost-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    position: fixed;
+    top: 170px !important; /* Valoare ajustată pentru a coborî chenarul */
+    right: 20px;
+    width: 300px;
+    display: none;
+}
+.cost-container.visible {
+    display: block;
+}
+.cost-button {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    position: fixed;
+    top: 110px !important;
+    right: 20px;
+    cursor: pointer;
+}
+.cost-history {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+.cost-history.visible {
+    display: block;
+}
+.warning {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}

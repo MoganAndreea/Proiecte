@@ -1,0 +1,125 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-image: url('./assets/Img_fundal.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat; /* Nu repeta imaginea */
+    background-position: center;
+    color: #5a3e36;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Ascunde scroll-ul pe pagina principală */
+}
+
+
+/* .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+    z-index: 1000;
+    background-color: transparent;
+    backdrop-filter: none;
+} */
+
+
+.content {
+    display:flex;
+    justify-content: space-between;
+    align-items:first baseline;
+    margin-top: 5px;
+    height: 100vh; /* Asigură-te că ocupă întreaga înălțime a viewport-ului */
+}
+
+.left-panel {
+    margin-top: 10px;
+    margin-left: 70px;
+    font-size: larger;
+    width: 30%;
+    padding: 10px;
+    position: sticky;
+    top: 200px;
+    flex-shrink: 0;
+    height: calc(100vh - 60px); /* Ajustează pentru a se potrivi înălțimii */
+}
+
+.right-panel {
+    position: relative;
+    width: 90%;
+    padding: 100px;
+    height: calc(100vh - 60px); /* Ajustează pentru a se potrivi înălțimii */
+}
+
+.task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 10px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 70px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item span {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.task-item .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.task-item .actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5a3e36;
+}
+
+.task-item .actions button:hover {
+    color: #d9534f;
+}
+
+.task-item.completed {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Social Media */
+.social-media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+    position:absolute; /* Poziționare absolută */
+    bottom: 60px; /* Ajustează distanța față de partea de jos a right-panel */
+    left: 45%; /* Centerare pe axa orizontală */
+    transform: translateX(-50%); /* Ajustare pentru a centra exact */
+}
+.social-media .flex {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.social-media a {
+    color: #5a3e36; /* Schimbă culoarea iconițelor */
+    font-size: 36px; /* Dimensiunea iconițelor */
+    margin: 0 15px; /* Marginea pentru distanțare */
+    transition: transform 0.2s; /* Efect de tranziție la hover */
+}
+
+.social-media a:hover {
+    transform: scale(1.1); /* Efect de zoom la hover */
+    color: #ffc0cb; /* Poți schimba culoarea la hover, dacă dorești */
+}

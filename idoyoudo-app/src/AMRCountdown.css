@@ -1,0 +1,57 @@
+/* AMR Countdown */
+.amr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  position: relative;
+  padding-top: 10px;
+}
+
+.heart-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.heart-shape {
+  width: 30px;
+  height: 30px;
+  bottom: 10px;
+  background-color: #ffc0cb;
+  transform: rotate(-45deg);
+  margin-left: 100px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: heartbeat 1.5s infinite;
+}
+
+.heart-shape::before,
+.heart-shape::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ffc0cb;
+}
+
+.heart-shape::before {
+  top: -15px;
+  left: 0;
+}
+
+.heart-shape::after {
+  top: 0;
+  left: 15px;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+      transform: scale(1) rotate(-45deg);
+  }
+  50% {
+      transform: scale(1.1) rotate(-45deg);
+  }
+}
